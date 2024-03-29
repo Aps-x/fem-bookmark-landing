@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bookmark Landing Page</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="scripts/accordion.js" defer></script>
+    <script src="scripts/tabs.js" defer></script>
+    <script src="scripts/nav_toggle.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__flex_container | content_column">
+            <img class="header__logo" src="images/logo-bookmark.svg" alt="Bookmark">
+
+            <nav class="top_nav">
+                <ul class="top_nav__list">
+                    <li class="top_nav__item"><a href="" class="top_nav__link">Features</a></li>
+                    <li class="top_nav__item"><a href="" class="top_nav__link">Pricing</a></li>
+                    <li class="top_nav__item"><a href="" class="top_nav__link">Contact</a></li>
+                    <li class="top_nav__item"><a href="" class="top_nav__link | btn btn--red">Login</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav_toggle" aria-controls="mobile_nav" aria-expanded="false">
+                <img class="nav_toggle__hamburger" src="images/icon-hamburger.svg" alt="" aria-hidden="true">
+                <span class="visually_hidden">Menu</span>
+            </button>
+
+            <dialog class="dialog">
+                <div class="dialog__grid">
+                    <header class="dialog__header">
+                        <img src="images/logo-bookmark-mobile.svg" alt="" loading="lazy">
+                        <button class="dialog__btn_close">
+                            <img src="images/icon-close.svg" alt="" loading="lazy">
+                        </button>
+                    </header>
+                    
+                    <nav class="mobile_nav">
+                        <ul class="mobile_nav__list">
+                            <li class="mobile_nav__item"><a href="" class="mobile_nav__link">Features</a></li>
+                            <li class="mobile_nav__item"><a href="" class="mobile_nav__link">Pricing</a></li>
+                            <li class="mobile_nav__item"><a href="" class="mobile_nav__link">Contact</a></li>
+                            <li class="mobile_nav__item"><a href="" class="mobile_nav__link">Login</a></li>
+                        </ul>
+                    </nav>
+    
+                    <div class="dialog__socials">
+                        <a href=""><img class="dialog__icon" src="images/icon-facebook.svg" alt="Facebook" loading="lazy"></a>
+                        <a href=""><img class="dialog__icon" src="images/icon-twitter.svg" alt="Twitter" loading="lazy"></a>    
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="hero_section">
+            <div class="hero_section__container | content_column" data-column-count="2">
+                <article class="hero_section__article">
+                    <h1 class="hero_section__title">A Simple Bookmark Manager</h1>
+                    <p class="hero_section__paragraph">
+                        A clean and simple interface to organize your favourite websites. Open a new 
+                        browser tab and see your sites load instantly. Try it for free.
+                    </p>
+                    <div class="hero_section__buttons">
+                        <a href="" class="btn">Get it on Chrome</a>
+                        <a href="" class="btn | btn--gray">Get it on Firefox</a>
+                    </div>
+                </article>
+                <img class="hero_section__image" src="images/illustration-hero.svg" alt="">
+            </div>
+            <div class="hero_section__bg_shape"></div>
+        </section>
+        <section class="features_section | content_column">
+            <h2 class="features_section__title">Features</h2>
+            <p class="features_section__paragraph">
+                Our aim is to make it quick and easy for you to access your favourite websites. 
+                Your bookmarks sync between your devices so you can access them on the go.
+            </p>
+            <div class="features_section__bg_shape"></div>
+            <div class="tabs">
+                <ul class="tabs__list" aria-labelledby="features_section__title">
+                  <li class="tabs__item"><a id="tab_1" class="tabs__link" href="#bookmarking">Simple Bookmarking</a></li>
+                  <li class="tabs__item"><a id="tab_2" class="tabs__link" href="#searching">Speedy Searching</a></li>
+                  <li class="tabs__item"><a id="tab_3" class="tabs__link" href="#sharing">Easy Sharing</a></li>
+                </ul>
+            
+                <div class="tabs__panels">
+
+                    <div id="bookmarking" class="tabs__content" aria-labelledby="tab_1">
+                        <img class="tabs__image" src="images/illustration-features-tab-1.svg" alt="">
+                        <article class="tabs__article">
+                            <h3 class="tabs__title">Bookmark in one click</h3>
+                            <p class="tabs__paragraph">
+                                Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                                gives you complete control over how you manage your favourite sites.
+                            </p>
+                            <a class="btn | tabs__btn" href="">More Info</a>
+                        </article>
+                    </div>
+
+                    <div id="searching" class="tabs__content" aria-labelledby="tab_2">
+                        <img class="tabs__image" src="images/illustration-features-tab-2.svg" alt="">
+                        <article class="tabs__article">
+                            <h3 class="tabs__title">Intelligent search</h3>
+                            <p class="tabs__paragraph">
+                                Our powerful search feature will help you find saved sites in no time at all. 
+                                No need to trawl through all of your bookmarks.                            </p>
+                            <a class="btn | tabs__btn" href="">More Info</a>
+                        </article>
+                    </div>
+
+                    <div id="sharing" class="tabs__content" aria-labelledby="tab_3">
+                        <img class="tabs__image" src="images/illustration-features-tab-3.svg" alt="">
+                        <article class="tabs__article">
+                            <h3 class="tabs__title">Share your bookmarks</h3>
+                            <p class="tabs__paragraph">
+                                Easily share your bookmarks and collections with others. Create a shareable 
+                                link that you can send at the click of a button.  
+                            </p>
+                            <a class="btn | tabs__btn" href="">More Info</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="downloads_section | content_column">
+            <h2 class="downloads_section__title">Download the extension</h2>
+            <p class="downloads_section__paragraph">
+                We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+                got a favourite you’d like us to prioritize.
+            </p>
+            <div class="downloads_section__cards">
+                <article class="card">
+                    <img class="card__image" src="images/logo-chrome.svg" alt="" loading="lazy">
+                    <h3 class="card__title">Add to Chrome</h3>
+                    <p class="card__subtitle">Minimum version 62</p>
+                    <img class="card__dots" src="images/bg-dots.svg" alt="" loading="lazy">
+                    <a href="" class="btn | card__btn">Add & Install Extension</a>
+                </article>
+
+                <article class="card">
+                    <img class="card__image" src="images/logo-firefox.svg" alt="" loading="lazy">
+                    <h3 class="card__title">Add to Firefox</h3>
+                    <p class="card__subtitle">Minimum version 55</p>
+                    <img class="card__dots" src="images/bg-dots.svg" alt="" loading="lazy">
+                    <a href="" class="btn | card__btn">Add & Install Extension</a>
+                </article>
+
+                <article class="card">
+                    <img class="card__image" src="images/logo-opera.svg" alt="" loading="lazy">
+                    <h3 class="card__title">Add to Opera</h3>
+                    <p class="card__subtitle">Minimum version 46</p>
+                    <img class="card__dots" src="images/bg-dots.svg" alt="" loading="lazy">
+                    <a href="" class="btn | card__btn">Add & Install Extension</a>
+                </article>
+            </div>
+        </section>
+        <section class="faq_section | content_column">
+            <h2 class="faq_section__title">Frequently Asked Questions</h2>
+            <p class="faq_section__paragraph">
+                Here are some of our FAQs. If you have any other questions you’d like 
+                answered please feel free to email us.
+            </p>
+
+            <div class="accordion">
+
+                <div class="accordion__panel">
+                    <h3 class="accordion__header">
+                        <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="sect1" id="accordion1id">
+                            <span>What is bookmark?</span>
+                            <img class="accordion__arrow" src="images/icon-arrow.svg" alt="">
+                        </button>
+                    </h3>
+                    <article class="accordion__content" id="sect1" role="region" aria-labelledby="accordion1id" aria-hidden="true">
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                                justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="accordion__panel">
+                    <h3 class="accordion__header">
+                        <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="sect2" id="accordion2id">
+                            <span>How can I request a new browser?</span>
+                            <img class="accordion__arrow" src="images/icon-arrow.svg" alt="">
+                        </button>
+                    </h3>
+                    <article class="accordion__content" id="sect2" role="region" aria-labelledby="accordion2id" aria-hidden="true">
+                        <div>
+                            <p>
+                                Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+                                Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+                                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+                                Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="accordion__panel">
+                    <h3 class="accordion__header">
+                        <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="sect3" id="accordion3id">
+                            <span>Is there a mobile app?</span>
+                            <img class="accordion__arrow" src="images/icon-arrow.svg" alt="">
+                        </button>
+                    </h3>
+                    <article class="accordion__content" id="sect3" role="region" aria-labelledby="accordion3id" aria-hidden="true">
+                        <div>
+                            <p>
+                                Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+                                urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+                                sollicitudin ex et ultricies bibendum.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="accordion__panel">
+                    <h3 class="accordion__header">
+                        <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="sect4" id="accordion4id">
+                            <span>What about other Chromium browsers?</span>
+                            <img class="accordion__arrow" src="images/icon-arrow.svg" alt="">
+                        </button>
+                    </h3>
+                    <article class="accordion__content" id="sect4" role="region" aria-labelledby="accordion4id" aria-hidden="true">
+                        <div>
+                            <p>
+                                Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+                                vitae neque eget nisl gravida pellentesque non ut velit.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <a href="" class="btn | faq_section__btn">More Info</a>
+            </div>
+        </section>
+        <section class="cta_section">
+            <div class="content_column">
+                <p class="cta_section__paragraph">35,000+ Already Joined</p>
+                <h2 class="cta_section__title">Stay up-to-date with what we’re doing</h2>
+    
+                <form class="contact_form" action="">
+                    <label class="visually_hidden" for="email">Email:</label>
+                    <div class="contact_form__input_container">
+                        <input class="contact_form__input" type="text" id="email" placeholder="Enter your email address">
+                        <button class="btn | btn--red btn--no-shadow contact_form__btn" disabled="">Contact Us</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__grid | content_column">
+            <img class="footer__logo" src="images/logo-bookmark-light.svg" alt="">
+            <nav class="bottom_nav">
+                <ul class="bottom_nav__list">
+                    <li class="bottom_nav__item"><a href="" class="bottom_nav__link">Features</a></li>
+                    <li class="bottom_nav__item"><a href="" class="bottom_nav__link">Pricing</a></li>
+                    <li class="bottom_nav__item"><a href="" class="bottom_nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer__socials">
+                <a href=""><img class="footer__icon" src="images/icon-facebook.svg" alt="Facebook" loading="lazy"></a>
+                <a href=""><img class="footer__icon" src="images/icon-twitter.svg" alt="Twitter" loading="lazy"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
