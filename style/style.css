@@ -373,7 +373,7 @@ Layout
 }
 
 .header {
-  padding-top: 3rem;
+  padding-block: 2rem;
   background-color: var(--clr_white);
 }
 .header__flex_container {
@@ -381,6 +381,14 @@ Layout
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    pointer-events: all;
+  }
 }
 
 .top_nav {
@@ -445,7 +453,7 @@ Layout
 }
 
 .hero_section {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .hero_section__container {
   display: grid;

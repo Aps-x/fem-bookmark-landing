@@ -368,13 +368,19 @@ Layout
     margin-inline: auto;
 }
 .header {
-    padding-top: 3rem;
+    padding-block: 2rem;
     background-color: var(--clr_white);
     &__flex_container {
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
         align-items: center;
+    }
+    @media (max-width: $breakpoint_tablet) {
+       position: sticky;
+       top: 0;
+       z-index: 1;
+       pointer-events: all; 
     }
 }
 .top_nav {
@@ -432,7 +438,7 @@ Layout
     }
 }
 .hero_section {
-    margin-top: 5rem;
+    margin-top: 2rem;
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
