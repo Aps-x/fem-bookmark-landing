@@ -470,7 +470,7 @@ Layout
 .hero_section__bg_shape {
   position: absolute;
   right: 0;
-  bottom: 12.5rem;
+  bottom: 16rem;
   height: 352px;
   width: 40%;
   z-index: -1;
