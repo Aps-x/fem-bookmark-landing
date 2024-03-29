@@ -52,9 +52,6 @@ HTML Elements
     padding: 0;
     font: inherit;
 }
-html {
-    overflow-x: hidden;
-}
 body {
     font-family: var(--ff_main);
     font-size: var(--fs_regular);
@@ -192,6 +189,7 @@ Components
         grid-template-columns: repeat(2, auto);
         justify-items: start;
         align-items: center;
+        text-align: left;
         width: 100%;
         cursor: pointer;
     }
@@ -448,7 +446,7 @@ Layout
         position: absolute;
         top: 0;
         left: 50%;
-        width: 50vw;
+        width: 45vw;
         max-width: 40rem;
     }
     &__article {
@@ -456,13 +454,13 @@ Layout
     }
     &__bg_shape {
         position: absolute;
+        right: 0;
         bottom: 12.5rem;
-        right: -60%;
-        width: 100%;
         height: 352px;
-        background-color: var(--clr_blue);
+        width: 40%;
         z-index: -1;
-        border-radius: 352px;
+        background-color: var(--clr_blue);
+        border-radius: 352px 0px 0px 352px;
     }
     &__title {
         font-size: var(--fs_large);
@@ -494,10 +492,8 @@ Layout
         }
         &__bg_shape {
             top: 25vh;
-            right: -40%;
-            width: 120%;
             height: 50vw;
-            border-radius: 300px;
+            width: 60%;
         }
         &__title {
             text-align: center;

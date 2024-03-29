@@ -19,7 +19,9 @@ navToggle.addEventListener("click", () => {
 
 modalClose.addEventListener("click", () => {
     modal.close();
+});
 
+modal.addEventListener("close", () => {
     navToggle.setAttribute("aria-expanded", false);
     iconHamburger.style.display = "block";
     headerLogo.style.display = "block";
