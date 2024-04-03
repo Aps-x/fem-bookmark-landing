@@ -182,7 +182,6 @@ Components
     }
     &__trigger {
         padding-block: 1.5rem;
-        font-weight: var(--fw_medium);
         border: none;
         background-color: unset;
         display: grid;
@@ -379,6 +378,7 @@ Layout
        top: 0;
        z-index: 1;
        pointer-events: all; 
+       padding-block: 1rem;
     }
 }
 .top_nav {
